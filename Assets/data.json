@@ -1,0 +1,16 @@
+{
+    "title" : "Super Hero Flipz",
+    "favicon_url" : "favicon.ico",
+    "card_background_image_url" : "https://i.pinimg.com/originals/33/1a/e9/331ae9cc528f3f425972e423bd04cea1.jpg",
+    "card_logo" : "https://insidepulse.com/wp-content/uploads/2019/07/DC-Comics-logo-gold-bronze-black.png",
+    "superman" : "https://pngimg.com/uploads/superman/superman_PNG75.png",
+    "batman" : "https://purepng.com/public/uploads/large/purepng.com-batmanbatmansuperherocomicdc-comicsbob-kanebat-manbruce-wayne-1701528523524aeprs.png",
+    "wonderwoman" : "./Assets/Characters/wonderwoman.png",
+    "flash" : "https://vignette.wikia.nocookie.net/death-minute-dbx-arcade-beatdown-fight-club/images/9/90/The_Flash.png/revision/latest?cb=20181221042200",
+    "aquaman" : "https://i.pinimg.com/originals/ea/35/ee/ea35ee975de339eb8f78c89c5b9a901e.png",
+    "joker" : "https://i.pinimg.com/originals/c8/39/4e/c8394ee38eef26a8d61b60e4953d2354.png",
+    "background_image_url" : "./Assets/main-bg.jpg",
+    "timer_limit" : "30",
+    "page_title" : "Super Hero Flipz",
+    "dev_info" : "Creative Rights © 2020 Souradeep Kr. Basu"
+}       

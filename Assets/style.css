@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500&display=swap');
+
+*{
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+body{
+    margin: 0;
+}
+
+.overlay-text{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Bangers', cursive;
+    font-weight: normal;
+    color: brown;
+    -webkit-text-stroke: 3px rgb(230, 165, 16);
+    visibility: hidden;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+  }
+  
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(0, 0, 0, .8);
+      font-size: 10em;
+    }
+  }
+
+.page-title{
+    font-family: 'Bangers', cursive;
+    font-size: 5.4em;
+    font-weight: normal;
+    color: brown;
+    -webkit-text-stroke: 3px rgb(230, 165, 16);
+    text-align: center;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 61px;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.game-info-container{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.game-info{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2.2em;
+    font-weight: normal;
+    color: brown;
+    -webkit-text-stroke: 2px rgb(230, 165, 16);
+}
+
+.card{
+    position: relative;
+    background: brown;
+    height: 174px;
+    width: 125px;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.card:active{
+    transform: scale(.97);
+    transition: transform .5s;
+}
+
+.card-front, .card-back{
+    background:radial-gradient( rgb(196, 44, 44), rgb(90, 6, 6));
+    border: 6px solid white;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-character{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 14px;
+}
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+.card-logo{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 46px;
+    left: 20px;
+}
+
+/* .card-back .card-logo:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+} */
+
+.card.flip{
+    transform: rotateY(180deg);
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.356);
+}
+
+.dev-info{
+    padding: 4px;
+}
+
+.dev-info-content{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .overlay-text{
+        flex-direction: column;
+        -webkit-text-size-adjust: 2em;
+        text-align: center;
+    }
+    .page-title{
+        font-size: 3.6em;
+        margin-bottom: 4px;
+        -webkit-text-stroke: 2px rgb(230, 165, 16);
+    }
+    .game-container{
+        grid-template-columns: repeat(3, auto);
+    }
+    .game-info{
+        font-size: 1.6em;
+        -webkit-text-stroke: 1.6px rgb(230, 165, 16);
+        margin-bottom: -10px;
+    }
+    @keyframes overlay-grow {
+        from {
+          background-color: rgba(0, 0, 0, .8);
+          font-size: 4em;
+        }
+        to {
+          background-color: rgba(0, 0, 0, .8);
+          font-size: 7em;
+        }
+      }
+}
