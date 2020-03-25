@@ -131,7 +131,7 @@ body{
 
 .card-back:hover .card-logo{
     transform: scale(1.06);
-    transition: transform .02s;
+    transition: transform .015s;
 }
 
 .card.flip{
