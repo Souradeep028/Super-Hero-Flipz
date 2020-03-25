@@ -129,8 +129,8 @@ body{
     left: 20px;
 }
 
-.card-back .card-logo:hover{
-    transform: scale(1.2);
+.card-back:hover .card-logo{
+    transform: scale(1.06);
     transition: transform 0.5s;
 }
 
