@@ -95,7 +95,7 @@ body{
 
 .card:active{
     transform: scale(.97);
-    transition: transform .5s;
+    transition: transform .2s;
 }
 
 .card-front, .card-back{
@@ -129,10 +129,10 @@ body{
     left: 20px;
 }
 
-/* .card-back .card-logo:hover{
+.card-back .card-logo:hover{
     transform: scale(1.2);
     transition: transform 0.5s;
-} */
+}
 
 .card.flip{
     transform: rotateY(180deg);
@@ -182,5 +182,39 @@ footer{
           background-color: rgba(0, 0, 0, .8);
           font-size: 7em;
         }
-      }
+    }
+}
+
+@media (max-width: 400px){
+    .overlay-text{
+        flex-direction: column;
+        -webkit-text-size-adjust: 2em;
+        text-align: center;
+    }
+    .page-title{
+        font-size: 3.6em;
+        margin-bottom: 4px;
+        -webkit-text-stroke: 2px rgb(230, 165, 16);
+    }
+    .game-container{
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-info{
+        font-size: 1.6em;
+        -webkit-text-stroke: 1.6px rgb(230, 165, 16);
+    }
+    @keyframes overlay-grow {
+        from {
+          background-color: rgba(0, 0, 0, .8);
+          font-size: 4em;
+        }
+        to {
+          background-color: rgba(0, 0, 0, .8);
+          font-size: 7em;
+        }
+    }
 }
