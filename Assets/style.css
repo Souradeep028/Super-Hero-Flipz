@@ -95,7 +95,7 @@ body{
 
 .card:active{
     transform: scale(.97);
-    transition: transform .2s;
+    transition: transform .5s;
 }
 
 .card-front, .card-back{
@@ -193,7 +193,7 @@ footer{
     }
     .page-title{
         font-size: 3.6em;
-        margin-bottom: 4px;
+        margin-bottom: -6px;
         -webkit-text-stroke: 2px rgb(230, 165, 16);
     }
     .game-container{
@@ -202,10 +202,12 @@ footer{
     .game-info-container {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 24px;
     }
     .game-info{
         font-size: 1.6em;
         -webkit-text-stroke: 1.6px rgb(230, 165, 16);
+        margin-bottom: 2px;
     }
     @keyframes overlay-grow {
         from {
